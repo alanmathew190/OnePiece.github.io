@@ -3,22 +3,101 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 header{
     width: 100%;
     height: 100vh;
-    font-size: 4rem;
+    font-size: 6em;
     font-weight: bold;
     align-items: center;
     display: flex;
     justify-content: center;
-    background: url(/images/onepiecemain.jpg);
+    background: url(/images/onepiece.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 header h1{
-    color: black;
-   mix-blend-mode: overlay;
+    color: rgb(255, 255, 255);
+   mix-blend-mode:overlay;
+   background-color: black;
+   text-shadow: 5px 5px 10px black;
+   padding: 1em;
+   box-shadow: 5px 5px 10px black;
 }
+
+.about{
+    background: url(/images/onepiecemain.jpg);
+    background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 40px;
+        height: 100vh;
+}
+
+.summary{
+    color: white;
+    width: 50%;
+    font-size: 20px;
+    background-color:transparent;
+    backdrop-filter: blur(30px);
+    padding:30px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px black;
+    text-align: justify;
+    justify-self: end;
+}
+.lists{
+    display: flex;
+    justify-content: space-evenly;
+    height: 100vh;
+    background-color: rgb(9, 9, 9);
+    align-items: center;
+        transform-style: preserve-3d;
+        transform: perspective(2000px);
+        padding: 0 50px 0 50px;
+}
+.item{
+    height: 250px;
+    width: 9%;
+    transition: .5s;
+    filter: brightness(.1) grayscale();
+}
+.item:hover{
+    filter: brightness(1);
+    transform: translateZ(150px);
+}
+.item:hover+ *{
+    filter: brightness(.6);
+    transform: translateZ(75px) rotateY(40deg);
+}
+.item:hover+ * + *{
+    filter: brightness(.4);
+    transform: translateZ(50px) rotateY(20deg);
+}
+.item:hover+*+*+*{
+    filter: brightness(.2);
+    transform: translateZ(25px) rotateY(10deg);
+}
+
+/* has */
+.item:has(+*:hover){
+   filter: brightness(.6);
+    transform: translateZ(75px) rotateY(-40deg);
+}
+.item:has(+*+*:hover) {
+    filter: brightness(.4);
+    transform: translateZ(50px) rotateY(-20deg);
+}
+.item:has(+*+*+*:hover) {
+    filter: brightness(.2);
+    transform: translateZ(25px) rotateY(-10deg);
+}
+
+ img{
+    height:100%;
+    width:100%;
+}
+
