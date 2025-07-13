@@ -1,0 +1,24 @@
+*{
+    font-family:Poppins;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    font-size: 4rem;
+    font-weight: bold;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: url(/images/onepiecemain.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header h1{
+    color: black;
+   mix-blend-mode: overlay;
+}
