@@ -27,10 +27,27 @@ header h1{
     height: fit-content;
     width: fit-content;
     color: rgb(255, 250, 250);
-   /* mix-blend-mode:overlay; */
    text-shadow: 5px 5px 10px black;
     top:30%;
     left: 250px;
+}
+
+.logo{
+    position: absolute;
+    height: 100px;
+    width:90px;
+    border:solid;
+    background: url(/images/pixellogos-removebg-preview.png);
+    background-position:right;
+    background-size: auto 110%;
+    top: 1%;
+    left: 2%;
+    animation: moves 4s steps(8) infinite ;
+}
+@keyframes moves{
+    to{
+        background-position:0 130%;
+    }
 }
 
 .about{
@@ -73,10 +90,10 @@ header h1{
 }
 .item:hover{
     filter: brightness(1);
-    width: 250px;
-    height: 70vh;
+    /* width: 250px;
+    height: 70vh; */
     transition: 1s;
-    transform: translateZ(150px);
+    transform: translateZ(100px);
     box-shadow: 1px 1px 5px 1px #c3e332;
 }
 .item:hover+ *{
