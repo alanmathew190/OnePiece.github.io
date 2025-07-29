@@ -152,6 +152,8 @@ img{
         justify-content: space-evenly;
         transform-style: preserve-3d;
         transform: perspective(2000px);;
+        position: sticky;
+        top: 0;
 }
 .each p{
     backdrop-filter: blur(1px);
